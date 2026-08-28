@@ -1,4 +1,4 @@
-name: download_file
+name: train_val_test_split
 conda_env: conda.yml
 
 entry_points:
@@ -23,4 +23,4 @@ entry_points:
         type: string
         default: 'none'
 
-    command: "python run.py {input} {test_size} --random_seed {random_seed} --stratify_by {stratify_by}"
+    command: "PYTHONPATH=..:$PYTHONPATH python run.py {input} {test_size} --random_seed {random_seed} --stratify_by {stratify_by}"
