@@ -5,8 +5,11 @@ This script download a URL to a local destination
 import argparse
 import logging
 import os
-
 import wandb
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from wandb_utils.log_artifact import log_artifact
 

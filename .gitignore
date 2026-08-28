@@ -113,3 +113,15 @@ mlruns/
 outputs/
 random_forest_dir/
 multirun/
+
+# ...existing code...
+
+# Local environments and secrets
+.conda/
+.env.*
+!.env.example
+
+# Serialized model artifacts
+*.pkl
+*.joblib
+*.pickle
