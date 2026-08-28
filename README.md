@@ -86,6 +86,7 @@ You should see a message similar to:
 ```
 wandb: Appending key for api.wandb.ai to your netrc file: /home/[your username]/.netrc
 ```
+W&B Project: https://wandb.ai/jphernandez03-cvx/nyc_airbnb?nw=nwuserjphernandez03
 
 ### Cookie cutter
 In order to make your job a little easier, you are provided a cookie cutter template that you can use to create 
@@ -192,6 +193,7 @@ You can see the parameters that they require by looking into their `MLproject` f
 - `get_data`: downloads the data. [MLproject](https://github.com/udacity/build-ml-pipeline-for-short-term-rental-prices/blob/main/components/get_data/MLproject)
 - `train_val_test_split`: segrgate the data (splits the data) [MLproject](https://github.com/udacity/build-ml-pipeline-for-short-term-rental-prices/blob/main/components/train_val_test_split/MLproject)
 
+GitHub Project: https://github.com/jphernandez03/jacob_short-term-rental-prices
 
 ## Instructions
 
