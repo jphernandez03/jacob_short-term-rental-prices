@@ -15,4 +15,4 @@ entry_points:
         type: str
         default: ''
 
-    command: "PYTHONPATH=..:$PYTHONPATH python run.py {file_url} {artifact_name} {artifact_type} {artifact_description}"
+    command: "PYTHONPATH=..:$PYTHONPATH python main.py main.steps={steps}"

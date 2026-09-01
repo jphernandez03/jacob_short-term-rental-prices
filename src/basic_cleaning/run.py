@@ -12,6 +12,31 @@ logger = logging.getLogger()
 
 
 def go(args):
+    """
+    Download raw dataset from Weights & Biases, apply data cleaning transformations,
+    and upload the cleaned dataset as a new artifact.
+    
+    This function performs the following cleaning steps:
+    1. Filters listings by price range (removes outliers below min_price and above max_price)
+    2. Converts last_review column to datetime format
+    3. Filters by geographic bounds (NYC area: longitude -74.25 to -73.50, latitude 40.5 to 41.2)
+    
+    Args:
+        args (argparse.Namespace): Command-line arguments containing:
+            - input_artifact (str): Wandb artifact reference (e.g., "sample.csv:latest")
+            - output_artifact (str): Name of output artifact to save in Wandb
+            - output_type (str): Artifact type for tracking (e.g., "cleaned_data")
+            - output_description (str): Description of cleaning transformations
+            - min_price (float): Minimum price threshold in USD
+            - max_price (float): Maximum price threshold in USD
+    
+    Returns:
+        None
+        
+    Logs:
+        - Dataset dimensions after cleaning
+        - Uploads cleaned artifact to Wandb
+    """
   
     # Download input artifact. This will also log that this script is using this
     # particular version of the artifact

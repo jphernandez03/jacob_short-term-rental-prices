@@ -6,28 +6,28 @@ entry_points:
     parameters:
 
       input_artifact:
-        description: ## ADD DESCRIPTION
+        description: Wandb artifact reference for raw CSV data (e.g., "sample.csv:latest")
         type: string
 
       output_artifact:
-        description: ## ADD DESCRIPTION
+        description: Name of the output artifact to save cleaned data in Wandb (e.g., "cleaned_data.csv")
         type: string
 
       output_type:
-        description: ## ADD DESCRIPTION
+        description: Artifact type for tracking (e.g., "cleaned_data")
         type: string
 
       output_description:
-        description: ## ADD DESCRIPTION
+        description: Description of the cleaning process and transformations applied
         type: string
 
       min_price:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Minimum price threshold (in USD) to filter out unrealistic low prices
+        type: float
 
       max_price:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Maximum price threshold (in USD) to filter out unrealistic high prices
+        type: float
 
 
     command: >-
